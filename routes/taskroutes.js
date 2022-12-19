@@ -22,7 +22,7 @@ Taskrouter.post("/addtask", async (req, res) => {
 })
 
 //update task by id
-Taskrouter.put("/edittask/:id", async (req, res) => {
+Taskrouter.put("/updatetask/:id", async (req, res) => {
     const task = await Tasks.findByIdAndUpdate(req.params.id, req.body, {
         new: true
     })
@@ -32,7 +32,8 @@ Taskrouter.put("/edittask/:id", async (req, res) => {
 //delete task by id
 Taskrouter.delete("/erasetask/:id", async (req, res) => {
     await Tasks.findByIdAndDelete(req.params.id)
-    res.send(`task with id ${req.params.id} deleted`)
+    //send response in json format
+    res.send({message: "Task deleted successfully"})
 })
 
 
