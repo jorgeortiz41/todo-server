@@ -6,6 +6,7 @@ const Taskroutes = require('./routes/taskroutes')
 
 //Database Connection
 const conn_str = 'mongodb+srv://sweportfolio:sweportfolio@cluster0.laht2l1.mongodb.net/todo-app?retryWrites=true&w=majority'
+mongoose.set("strictQuery", false);
 mongoose.connect(conn_str,{ 
     useNewUrlParser: true, 
     useUnifiedTopology: true 
