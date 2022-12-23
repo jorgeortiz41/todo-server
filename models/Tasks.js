@@ -12,13 +12,27 @@ const schema = new mongoose.Schema({
         required:true
     },
 
-    isFav:{
+    inProg:{
+        type:Boolean,
+        default:false
+    },
+    
+    isImportant:{
         type:Boolean,
         default:false
     },
 
     date:{
         type:Date,
+    },
+
+    cat:{
+        type:String,
+        default:"Tasks"
+    },
+
+    notes:{
+        type:String,
     }
 })
 
