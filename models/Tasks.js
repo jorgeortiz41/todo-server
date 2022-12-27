@@ -6,15 +6,10 @@ const schema = new mongoose.Schema({
         required:true
     },
 
-    isDone:{
-        type:Boolean,
-        default: false,
-        required:true
-    },
-
-    inProg:{
-        type:Boolean,
-        default:false
+    status:{
+        type:String,
+        default:"to-do",
+        required:true,
     },
     
     isImportant:{
