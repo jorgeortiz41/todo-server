@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const Taskroutes = require('./routes/taskroutes')
+const Listroutes = require('./routes/listroutes')
 
 //Database Connection
 const conn_str = 'mongodb+srv://sweportfolio:sweportfolio@cluster0.laht2l1.mongodb.net/todo-app?retryWrites=true&w=majority'
@@ -26,7 +27,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
-app.use("/api", Taskroutes);
+app.use("/api", Taskroutes, Listroutes);
 
 
 //listen to port

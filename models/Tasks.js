@@ -26,6 +26,10 @@ const schema = new mongoose.Schema({
         default:"Tasks"
     },
 
+    list:{
+        type:String,
+    },
+
     notes:{
         type:String,
     }
