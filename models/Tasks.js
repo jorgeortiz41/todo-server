@@ -28,6 +28,7 @@ const schema = new mongoose.Schema({
 
     list:{
         type:String,
+        default:"None"
     },
 
     notes:{
