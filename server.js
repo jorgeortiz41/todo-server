@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const Taskroutes = require('./routes/taskroutes')
 const Listroutes = require('./routes/listroutes')
+//require dotenv
+require('dotenv').config();
 
 //Database Connection
-const conn_str = 'mongodb+srv://sweportfolio:sweportfolio@cluster0.laht2l1.mongodb.net/todo-app?retryWrites=true&w=majority'
+const conn_str = process.env.ATLAS_URI;
 mongoose.set("strictQuery", false);
 mongoose.connect(conn_str,{ 
     useNewUrlParser: true, 
