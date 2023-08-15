@@ -8,7 +8,7 @@ const Listroutes = require('./routes/listroutes')
 require('dotenv').config();
 
 //Database Connection
-const conn_str = process.env.ATLAS_URI;
+const conn_str = process.env.MONGODB_URI;
 mongoose.set("strictQuery", false);
 mongoose.connect(conn_str,{ 
     useNewUrlParser: true, 
